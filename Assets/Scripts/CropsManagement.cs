@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class CropsManagement : MonoBehaviour
 {
+    [SerializeField] public ExitDoor growDoor;
+
     [SerializeField] private TMP_Text _carrotNumber;
     [SerializeField] private TMP_Text _berriesNumber;
     [SerializeField] private TMP_Text _wheatNumber;
@@ -13,12 +13,15 @@ public class CropsManagement : MonoBehaviour
     [HideInInspector] public int nbBerries;
     [HideInInspector] public int nbWheat;
 
-    [SerializeField] public GameObject _sowPanel;
-    [SerializeField] public GameObject _carrotsButton;
-    [SerializeField] public GameObject _berriesButton;
-    [SerializeField] public GameObject _wheatButton;
-
-    //singleton raf
+    private void Awake()
+    {
+        nbCarrots = 5;
+        nbBerries = 5;
+        nbWheat = 5;
+        _carrotNumber.text = nbCarrots.ToString();
+        _berriesNumber.text = nbBerries.ToString();
+        _wheatNumber.text = nbWheat.ToString();
+    }
     public void Carrots(int _number)
     {
         nbCarrots += _number;

@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Crop", menuName = "Crops")]
 public class CropClass : ScriptableObject
 {
-    public Sprite _sprite1;
-    public Sprite _sprite2;
-    public Sprite _deadSprite;
+    public Sprite initialSprite; public Sprite interactInitialSprite;
+    public Sprite sprite1; public Sprite interactsprite1;
+    public Sprite sprite2; public Sprite interactsprite2;
+    public Sprite deadSprite; public Sprite interactDeadSprite;
 
     [field: SerializeField]
     public int growTime { get; private set; }
@@ -21,4 +20,6 @@ public class CropClass : ScriptableObject
     [field: SerializeField]
     public int sellPrice { get; private set; }
 
+    [field: SerializeField]
+    public GameObject prefab { get; private set; }
 }

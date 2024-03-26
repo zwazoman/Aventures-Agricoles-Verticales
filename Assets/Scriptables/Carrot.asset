@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8d461fbd35e53499d858577b5c7f1e, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  _sprite1: {fileID: 29459997, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  _sprite2: {fileID: -1868920925, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  _sprite3: {fileID: -171893053, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  _deadSprite: {fileID: 515786551, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  <growTime>k__BackingField: 3
+  initialSprite: {fileID: 29459997, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  interactInitialSprite: {fileID: -1110634537, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  sprite1: {fileID: -1868920925, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  interactsprite1: {fileID: -1555156208, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  sprite2: {fileID: -171893053, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  interactsprite2: {fileID: -461895724, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  deadSprite: {fileID: 515786551, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  interactDeadSprite: {fileID: 1669370626, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  <growTime>k__BackingField: 2
   <drops>k__BackingField: 3
   <buyPrice>k__BackingField: 0
   <sellPrice>k__BackingField: 0
+  <prefab>k__BackingField: {fileID: 4288721120930904253, guid: c58a98a1c9fd055458d00869329f7ee5, type: 3}

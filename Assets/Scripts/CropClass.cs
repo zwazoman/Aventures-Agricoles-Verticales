@@ -5,10 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Crop", menuName = "Crops")]
 public class CropClass : ScriptableObject
 {
-    [SerializeField] private Sprite _sprite1;
-    [SerializeField] private Sprite _sprite2;
-    [SerializeField] private Sprite _sprite3;
-    [SerializeField] private Sprite _deadSprite;
+    public Sprite _sprite1;
+    public Sprite _sprite2;
+    public Sprite _deadSprite;
 
     [field: SerializeField]
     public int growTime { get; private set; }

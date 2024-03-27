@@ -18,13 +18,13 @@ public class ExitDoor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         _canInteract = true;
-        //_SR.sprite = _interactSprite;
+        _SR.sprite = _interactSprite;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         _canInteract = false;
-        //_SR.sprite = _normalSprite;
+        _SR.sprite = _normalSprite;
     }
 
     public void Interact(InputAction.CallbackContext context)
@@ -38,6 +38,5 @@ public class ExitDoor : MonoBehaviour
     private void Exit()
     {
         OnExit?.Invoke();
-        print("exit");
     }
 }

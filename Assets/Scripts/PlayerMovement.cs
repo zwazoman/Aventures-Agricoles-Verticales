@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float _speed = 8f;
     [SerializeField] private float _jumpPower = 16f;
+
+    //public event Action OnJump;
+    //public event Action OnLand;
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             _rb2d.velocity = new Vector2(_rb2d.velocity.x,_jumpPower);
+            //OnJump?.Invoke();
         }
         if (context.canceled && _rb2d.velocity.y > 0)
         {

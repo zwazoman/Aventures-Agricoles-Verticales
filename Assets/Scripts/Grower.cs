@@ -23,7 +23,6 @@ public class Grower : MonoBehaviour
 
     public void Grow()
     {
-        print("grow");
         _growlevel += 1;
         if (_growlevel == _infos.growTime) harvester.canHarvest = true;
         if (_growlevel == 1)

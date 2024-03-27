@@ -3,9 +3,13 @@ using UnityEngine.InputSystem;
 
 public class FarmPlot : MonoBehaviour
 {
+    private SpriteRenderer _SR;
+    private Sprite _normalSprite;
+
     [SerializeField] private CropsManagement _cropsManagement;
     [SerializeField] private Sower _sower;
     [SerializeField] GameObject _sowPanel;
+    [SerializeField] private Sprite _interactSprite;
     [SerializeField] GameObject _carrotsButton;
     [SerializeField] GameObject _berriesButton;
     [SerializeField] GameObject _wheatButton;
@@ -15,6 +19,8 @@ public class FarmPlot : MonoBehaviour
     private void Awake()
     {
         _sower._cropsManagement = _cropsManagement;
+        _SR = GetComponent<SpriteRenderer>();
+        _normalSprite = _SR.sprite;
     }
 
     private void OnEnable()
@@ -24,26 +30,22 @@ public class FarmPlot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 6)
-        {
-            _canSow = true;
-            print("in range");
-            //changer le sprite
-        }
+        _canSow = true;
+        _SR.sprite = _interactSprite;
+        print("in range");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 6)
-        {
-            _canSow = false;
-            print("out of range");
-            //rechanger le sprite
-        }
+        _canSow = false;
+        _SR.sprite = _normalSprite;
+        print("out of range");
     }
+
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed && _canSow) OpenSowPanel();
+        if (!_canSow) return;
+        if (context.performed) OpenSowPanel();
     }
 
     private void OpenSowPanel()

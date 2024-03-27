@@ -7,33 +7,25 @@ public class Interact : MonoBehaviour
 {
     private SpriteRenderer _SR;
 
-    public bool _canInteract;
-    public Sprite normalSprite;
+    //public bool _canInteract;
+    private Sprite _normalSprite;
     public Sprite interactSprite;
 
     private void Awake()
     {
         _SR = GetComponent<SpriteRenderer>();
-        _SR.sprite = normalSprite;
+        _normalSprite = _SR.sprite;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _canInteract = true;
+        //_canInteract = true;
         _SR.sprite = interactSprite;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _canInteract = false;
-        _SR.sprite = normalSprite;
-    }
-
-    public void Interaction(InputAction.CallbackContext context)
-    {
-        if(context.performed && _canInteract)
-        {
-            //Argann alaide
-        }
+        //_canInteract = false;
+        _SR.sprite = _normalSprite;
     }
 }

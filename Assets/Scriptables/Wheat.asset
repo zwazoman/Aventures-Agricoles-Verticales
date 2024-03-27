@@ -22,6 +22,6 @@ MonoBehaviour:
   interactDeadSprite: {fileID: -1832606244, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
   <growTime>k__BackingField: 2
   <drops>k__BackingField: 7
-  <buyPrice>k__BackingField: 0
-  <sellPrice>k__BackingField: 0
+  <buyPrice>k__BackingField: 100
+  <sellPrice>k__BackingField: 80
   <prefab>k__BackingField: {fileID: 1957948192250625029, guid: c07c0e60943b54d4fad332a7601261a6, type: 3}

@@ -6,33 +6,17 @@ public class ExitDoor : MonoBehaviour
 {
     private bool _canInteract;
     public event Action OnExit;
-    private SpriteRenderer _SR;
-    [SerializeField] private Sprite _interactSprite;
-    private Sprite _normalSprite;
 
-    private void Awake()
-    {
-        _SR = GetComponent<SpriteRenderer>();
-        _normalSprite = _SR.sprite;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        _canInteract = true;
-        _SR.sprite = _interactSprite;
-    }
+    [SerializeField] private Interact _interact;
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void Update()
     {
-        _canInteract = false;
-        _SR.sprite = _normalSprite;
+        _canInteract = _interact._canInteract;
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed && _canInteract)
-        {
-            Exit();
-        }
+        if (context.performed && _canInteract) Exit();
     }
 
     private void Exit()

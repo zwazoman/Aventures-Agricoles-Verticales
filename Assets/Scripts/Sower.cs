@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Sower : MonoBehaviour
 {
-    // diviser en 4 scripts et utiliser scriptables
+    // diviser en 5 scripts et utiliser scriptables
 
     [HideInInspector] public CropsManagement _cropsManagement;
     [SerializeField] private GameObject _shovel;

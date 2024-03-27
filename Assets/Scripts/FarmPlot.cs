@@ -3,24 +3,19 @@ using UnityEngine.InputSystem;
 
 public class FarmPlot : MonoBehaviour
 {
-    private SpriteRenderer _SR;
-    private Sprite _normalSprite;
-
     [SerializeField] private CropsManagement _cropsManagement;
+    [SerializeField] private Interact _interact;
     [SerializeField] private Sower _sower;
     [SerializeField] GameObject _sowPanel;
-    [SerializeField] private Sprite _interactSprite;
-    [SerializeField] GameObject _carrotsButton;
-    [SerializeField] GameObject _berriesButton;
-    [SerializeField] GameObject _wheatButton;
+    [SerializeField] private GameObject _carrotsButton;
+    [SerializeField] private GameObject _berriesButton;
+    [SerializeField] private GameObject _wheatButton;
 
     private bool _canSow = false;
 
     private void Awake()
     {
         _sower._cropsManagement = _cropsManagement;
-        _SR = GetComponent<SpriteRenderer>();
-        _normalSprite = _SR.sprite;
     }
 
     private void OnEnable()
@@ -28,24 +23,14 @@ public class FarmPlot : MonoBehaviour
         _sowPanel.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        _canSow = true;
-        _SR.sprite = _interactSprite;
-        print("in range");
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        _canSow = false;
-        _SR.sprite = _normalSprite;
-        print("out of range");
+        _canSow = _interact._canInteract;
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (!_canSow) return;
-        if (context.performed) OpenSowPanel();
+        if (context.performed && _canSow) OpenSowPanel();
     }
 
     private void OpenSowPanel()

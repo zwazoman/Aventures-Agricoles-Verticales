@@ -7,13 +7,14 @@ public class Grower : MonoBehaviour
     private int _growlevel = 0;
     SpriteRenderer SR;
     [SerializeField] Harvester harvester;
+    [SerializeField] private Interact _interact;
 
     private void Awake()
     {
         SR = GetComponent<SpriteRenderer>();
         SR.sprite = _infos.initialSprite;
-        harvester.normalSprite = _infos.initialSprite; // changement de sprite pour l'interaction
-        harvester.interactSprite = _infos.interactInitialSprite;
+        _interact.normalSprite = _infos.initialSprite; // changement de sprite pour l'interaction
+        _interact.interactSprite = _infos.interactInitialSprite;
     }
 
     public void Start()
@@ -28,14 +29,14 @@ public class Grower : MonoBehaviour
         if (_growlevel == 1)
         {
             SR.sprite = _infos.sprite1;
-            harvester.normalSprite = _infos.sprite1; //changement de sprite pour l'interaction
-            harvester.interactSprite = _infos.interactsprite1;
+            _interact.normalSprite = _infos.sprite1; //changement de sprite pour l'interaction
+            _interact.interactSprite = _infos.interactsprite1;
         }
         else
         {
             SR.sprite = _infos.sprite2;
-            harvester.normalSprite= _infos.sprite2; // changement de sprite pour l'interaction
-            harvester.interactSprite = _infos.interactsprite2;
+            _interact.normalSprite= _infos.sprite2; // changement de sprite pour l'interaction
+            _interact.interactSprite = _infos.interactsprite2;
         }
     }
 

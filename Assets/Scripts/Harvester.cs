@@ -9,29 +9,15 @@ public class Harvester : MonoBehaviour
     public bool isCarrot = false;
     public bool isBerries = false;
     public bool isWheat = false;
-    public Sprite normalSprite;
-    public Sprite interactSprite;
 
     private bool _canInteract;
-    private SpriteRenderer _SR;
+    [SerializeField] private Interact _interact;
     [SerializeField] private CropClass _infos;
-    [SerializeField] private GameObject _notGrowedPanel;
+    //[SerializeField] private GameObject _notGrowedPanel;
 
-    private void Awake()
+    private void Update()
     {
-        _SR = GetComponent<SpriteRenderer>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        _canInteract = true;
-        _SR.sprite = interactSprite;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        _canInteract = false;
-        _SR.sprite = normalSprite;
+        _canInteract = _interact._canInteract; 
     }
 
     public void Interact(InputAction.CallbackContext context)

@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3651645695987582798}
   - component: {fileID: 1034752586912272353}
   - component: {fileID: 946938079877010231}
+  - component: {fileID: 4333751926264697316}
   - component: {fileID: 5476633880925330073}
   m_Layer: 0
   m_Name: ExitDoor
@@ -222,7 +223,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fd476997005164ebee9cb4911c9ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactSprite: {fileID: 21300000, guid: 3c9f498ba9797d54a92f9596a3cb109b, type: 3}
+  _interact: {fileID: 4333751926264697316}
+--- !u!114 &4333751926264697316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7499710528508213402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108e67d4af5f11e4f8490313c12a3dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canInteract: 0
+  normalSprite: {fileID: 0}
+  interactSprite: {fileID: 21300000, guid: 3c9f498ba9797d54a92f9596a3cb109b, type: 3}
 --- !u!114 &5476633880925330073
 MonoBehaviour:
   m_ObjectHideFlags: 0

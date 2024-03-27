@@ -7,25 +7,25 @@ public class Interact : MonoBehaviour
 {
     private SpriteRenderer _SR;
 
-    //public bool _canInteract;
-    private Sprite _normalSprite;
+    [HideInInspector] public bool _canInteract;
+    [HideInInspector] public Sprite normalSprite;
     public Sprite interactSprite;
 
     private void Awake()
     {
         _SR = GetComponent<SpriteRenderer>();
-        _normalSprite = _SR.sprite;
+        normalSprite = _SR.sprite;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //_canInteract = true;
+        _canInteract = true;
         _SR.sprite = interactSprite;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //_canInteract = false;
-        _SR.sprite = _normalSprite;
+        _canInteract = false;
+        _SR.sprite = normalSprite;
     }
 }

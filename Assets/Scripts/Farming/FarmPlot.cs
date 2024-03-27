@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class FarmPlot : MonoBehaviour
 {
-    [SerializeField] private CropsManagement _cropsManagement;
     [SerializeField] private Interact _interact;
     [SerializeField] private Sower _sower;
     [SerializeField] GameObject _sowPanel;
@@ -13,10 +12,6 @@ public class FarmPlot : MonoBehaviour
 
     private bool _canSow = false;
 
-    private void Awake()
-    {
-        _sower._cropsManagement = _cropsManagement;
-    }
 
     private void OnEnable()
     {
@@ -36,9 +31,9 @@ public class FarmPlot : MonoBehaviour
     private void OpenSowPanel()
     {
         _sowPanel.SetActive(true);
-        if (_cropsManagement.nbCarrots == 0) _carrotsButton.SetActive(false);
-        if (_cropsManagement.nbBerries == 0) _berriesButton.SetActive(false);
-        if (_cropsManagement.nbWheat == 0) _wheatButton.SetActive(false);
+        if (CropsManagement.instance.nbCarrots == 0) _carrotsButton.SetActive(false); else _carrotsButton.SetActive(true);
+        if (CropsManagement.instance.nbBerries == 0) _berriesButton.SetActive(false); else _berriesButton.SetActive(true);
+        if (CropsManagement.instance.nbWheat == 0) _wheatButton.SetActive(false); else _wheatButton.SetActive(true);
         Time.timeScale = 0;
     }
 }

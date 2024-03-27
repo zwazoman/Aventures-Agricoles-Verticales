@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class CropsManagement : MonoBehaviour
 {
+    public static CropsManagement instance;
+    
     [SerializeField] public ExitDoor growDoor;
 
     [SerializeField] private TMP_Text _carrotNumber;
@@ -15,6 +17,7 @@ public class CropsManagement : MonoBehaviour
 
     private void Awake()
     {
+        instance = this; // singleton
         nbCarrots = 5;
         nbBerries = 5;
         nbWheat = 1;

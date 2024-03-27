@@ -1,14 +1,15 @@
+using System.Net;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Harvester : MonoBehaviour
 {
     [HideInInspector] public bool canHarvest;
-    [HideInInspector] public CropsManagement cropManagement;
     [HideInInspector] public GameObject shovel;
     public bool isCarrot = false;
     public bool isBerries = false;
     public bool isWheat = false;
+    public bool isDead = false;
 
     private bool _canInteract;
     [SerializeField] private Interact _interact;
@@ -28,9 +29,14 @@ public class Harvester : MonoBehaviour
         }
     }
 
-    private void Harvest()
+    private void Harvest() // switchcase
     {
-        if (isCarrot) cropManagement.Carrots(_infos.drops); else if (isBerries) cropManagement.Berries(_infos.drops); else cropManagement.Wheat(_infos.drops);
+        if (!isDead)
+        {
+            if (isCarrot) CropsManagement.instance.Carrots(_infos.drops);
+            if (isBerries) CropsManagement.instance.Berries(_infos.drops); 
+            if (isWheat) CropsManagement.instance.Wheat(_infos.drops);
+        }
         shovel.SetActive(true);
         Destroy(gameObject);
     }

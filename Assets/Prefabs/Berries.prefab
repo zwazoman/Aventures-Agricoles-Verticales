@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 606748467520712475}
   - component: {fileID: 5930426324100561747}
   - component: {fileID: -1715183241812634456}
+  - component: {fileID: 1754553980647794787}
   - component: {fileID: 6624658000402316175}
   - component: {fileID: -4514599908217938012}
   m_Layer: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1189920287, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,7 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
-  growDoor: {fileID: 0}
   harvester: {fileID: -1715183241812634456}
   _interact: {fileID: 6624658000402316175}
 --- !u!114 &-1715183241812634456
@@ -163,14 +163,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHarvest: 0
-  cropManagement: {fileID: 0}
   shovel: {fileID: 0}
   isCarrot: 0
   isBerries: 0
   isWheat: 0
+  isDead: 0
   _interact: {fileID: 6624658000402316175}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
-  _notGrowedPanel: {fileID: 0}
+--- !u!114 &1754553980647794787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252000622639940983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8e24f72cba7fe40a60fb47378f74ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
+  _interact: {fileID: 6624658000402316175}
+  _harvester: {fileID: -1715183241812634456}
 --- !u!114 &6624658000402316175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +289,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a63158fc-6ab7-45e0-9d63-3172bff98a94
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7664ddb1-ef02-41d2-88aa-6bacdcf45e75
+    m_ActionName: Player/Close[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

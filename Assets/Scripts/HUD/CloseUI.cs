@@ -10,6 +10,9 @@ public class CloseUI : MonoBehaviour
         if (context.performed) Close();
     }
 
+    /// <summary>
+    /// desactive le panel séléctionné et restore le cours du temps
+    /// </summary>
     public void Close()
     {
         _panelToClose.SetActive(false);

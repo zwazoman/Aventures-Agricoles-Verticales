@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class Grower : MonoBehaviour
 {
-    [SerializeField] private CropClass _infos;
-     private ExitDoor _growDoor;
+    private ExitDoor _growDoor;
     private int _growlevel = 0;
     private SpriteRenderer _SR;
-    [SerializeField] Harvester harvester;
+
+    [SerializeField] private CropClass _infos;
+    [SerializeField] private Harvester harvester;
     [SerializeField] private Interact _interact;
 
     private void Awake()
     {
-        _growDoor = CropsManagement.instance.growDoor;
+        _growDoor = CropsManagement.Instance.GrowDoor;
         _SR = GetComponent<SpriteRenderer>();
         _SR.sprite = _infos.initialSprite;
         _interact.interactSprite = _infos.interactInitialSprite;
@@ -22,10 +23,13 @@ public class Grower : MonoBehaviour
         _growDoor.OnExit += Grow;
     }
 
+    /// <summary>
+    /// gère la pousse des plantes quand le joueur intéragit avec la porte
+    /// </summary>
     public void Grow()
     {
         _growlevel += 1;
-        if (_growlevel == _infos.growTime) harvester.canHarvest = true;
+        if (_growlevel == _infos.growTime) harvester.CanHarvest = true;
         if (_growlevel == 1)
         {
             _SR.sprite = _infos.sprite1;

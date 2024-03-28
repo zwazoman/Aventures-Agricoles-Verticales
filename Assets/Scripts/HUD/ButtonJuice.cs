@@ -15,6 +15,10 @@ public class ButtonJuice : MonoBehaviour
         // si money jouer son monnaie sinon jouer pop
     }
 
+    /// <summary>
+    /// fais grossir puis rétrécir le bouton
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Bigger()
     {
         transform.localScale *= 1.1f;

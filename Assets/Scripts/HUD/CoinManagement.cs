@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class CoinManagement : MonoBehaviour
 {
-    public static CoinManagement instance;
+    public static CoinManagement Instance;
     [SerializeField] private TMP_Text _coinText;
-    public int nbCoin;
+    public int NbCoin { get; private set; }
 
     private void Awake()
     {
-        instance = this; // singleton
+        Instance = this; // singleton
     }
 
     public void Coin(int _number)
     {
-        if (_number < -nbCoin) return;
-        nbCoin += _number;
-        _coinText.text = nbCoin.ToString();
+        if (_number < -NbCoin) return;
+        NbCoin += _number;
+        _coinText.text = NbCoin.ToString();
     }
 }

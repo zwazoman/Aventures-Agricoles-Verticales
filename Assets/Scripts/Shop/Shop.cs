@@ -5,6 +5,7 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] private Interact _interact;
     [SerializeField] private GameObject _shopPanel;
+
     private bool _canInteract;
 
     private void Update()

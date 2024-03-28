@@ -11,7 +11,7 @@ public class CoinPickup : MonoBehaviour
     {
         if (collider.gameObject.layer == 6) // si c'est un joueur
         {
-            CoinManagement.instance.Coin(1); // ajouter une pièce
+            CoinManagement.Instance.Coin(1); // ajouter une pièce
             gameObject.SetActive(false); // désactiver la pièce
         }
     }

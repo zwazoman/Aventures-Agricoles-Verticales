@@ -5,6 +5,7 @@ public class BuySell : MonoBehaviour
     [SerializeField] private ShopManagement _shopManagement;
     [SerializeField] private CropClass _infos;
     [SerializeField] private int _quantity;
+    [SerializeField] private int _factor;
     [SerializeField] private bool _isCarrot;
     [SerializeField] private bool _isBerries;
     [SerializeField] private bool _isWheat;
@@ -13,8 +14,8 @@ public class BuySell : MonoBehaviour
     private int _sellPrice;
     private void Awake()
     {
-        _buyPrice = _infos.buyPrice * _quantity;
-        _sellPrice = _infos.sellPrice * _quantity;
+        _buyPrice = (_infos.buyPrice * _quantity) - (_infos.buyPrice * _factor);
+        _sellPrice = (_infos.sellPrice * _quantity) + (_infos.sellPrice * _factor);
     }
 
     /// <summary>

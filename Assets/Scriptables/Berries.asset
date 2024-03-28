@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8d461fbd35e53499d858577b5c7f1e, type: 3}
   m_Name: Berries
   m_EditorClassIdentifier: 
-  initialSprite: {fileID: 1189920287, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  interactInitialSprite: {fileID: 1055558277, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
-  sprite1: {fileID: -220941543, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  interactsprite1: {fileID: -2016816965, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
-  sprite2: {fileID: 1977884926, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  interactsprite2: {fileID: 415486976, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
-  deadSprite: {fileID: 833299873, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
-  interactDeadSprite: {fileID: 1568829783, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  <initialSprite>k__BackingField: {fileID: 1189920287, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  <sprite1>k__BackingField: {fileID: -220941543, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  <sprite2>k__BackingField: {fileID: 1977884926, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  <deadSprite>k__BackingField: {fileID: 833299873, guid: d8da0f14c8eb11a4c86fbe68aca65fbe, type: 3}
+  <interactInitialSprite>k__BackingField: {fileID: 1055558277, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  <interactsprite1>k__BackingField: {fileID: -2016816965, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  <interactsprite2>k__BackingField: {fileID: 415486976, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
+  <interactDeadSprite>k__BackingField: {fileID: 1568829783, guid: ca99e88b85e66ab4eb81db462b04aee3, type: 3}
   <growTime>k__BackingField: 2
-  <drops>k__BackingField: 5
-  <buyPrice>k__BackingField: 50
-  <sellPrice>k__BackingField: 25
-  <prefab>k__BackingField: {fileID: 4252000622639940983, guid: 4f8f8f8924f6f1a47a66d90039b3b7f4, type: 3}
+  <drops>k__BackingField: 10
+  <buyPrice>k__BackingField: 250
+  <sellPrice>k__BackingField: 20
+  <Prefab>k__BackingField: {fileID: 4252000622639940983, guid: 4f8f8f8924f6f1a47a66d90039b3b7f4, type: 3}
+  <IsCarrot>k__BackingField: 0
+  <IsBerries>k__BackingField: 1
+  <IsWheat>k__BackingField: 0

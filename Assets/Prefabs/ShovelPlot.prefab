@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 4098520433173116745}
   - component: {fileID: 202171854305249769}
   - component: {fileID: 5285094795597498154}
+  - component: {fileID: 7997221857353503467}
   - component: {fileID: 3510034856504615416}
   - component: {fileID: 8825672608376501960}
   m_Layer: 5
@@ -502,9 +503,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954845843393564048}
-        m_TargetAssemblyTypeName: Sower, Assembly-CSharp
-        m_MethodName: SowCarrot
+      - m_Target: {fileID: 7997221857353503467}
+        m_TargetAssemblyTypeName: SowManagement, Assembly-CSharp
+        m_MethodName: Sow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -526,6 +527,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7997221857353503467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988267070335138800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c0e4ef05c7b304f9da3ed7fe398c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _infos: {fileID: 11400000, guid: 20c85cc83fda76e4bb1a3852a29f018b, type: 2}
+  _shovel: {fileID: 6046506841606122799}
 --- !u!114 &3510034856504615416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,6 +579,7 @@ GameObject:
   - component: {fileID: 4593929384547484920}
   - component: {fileID: 607295600875871577}
   - component: {fileID: 1978778842001200653}
+  - component: {fileID: 7279308720993718955}
   - component: {fileID: 7537983087424166628}
   - component: {fileID: 3186922319085748431}
   m_Layer: 5
@@ -675,9 +691,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954845843393564048}
-        m_TargetAssemblyTypeName: Sower, Assembly-CSharp
-        m_MethodName: SowWheat
+      - m_Target: {fileID: 7279308720993718955}
+        m_TargetAssemblyTypeName: SowManagement, Assembly-CSharp
+        m_MethodName: Sow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -699,6 +715,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7279308720993718955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660913054158588246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c0e4ef05c7b304f9da3ed7fe398c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _infos: {fileID: 11400000, guid: 9d840ef7f2655e64f8204b0e04c432f5, type: 2}
+  _shovel: {fileID: 6046506841606122799}
 --- !u!114 &7537983087424166628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,7 +1036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interact: {fileID: 4862018017156931660}
-  _sower: {fileID: 954845843393564048}
+  _sower: {fileID: 0}
   _sowPanel: {fileID: 8973786489756209275}
   _carrotsButton: {fileID: 988267070335138800}
   _berriesButton: {fileID: 6278900229467114521}
@@ -1023,9 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108e67d4af5f11e4f8490313c12a3dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canInteract: 0
-  normalSprite: {fileID: 21300000, guid: 00a31d24aefd6c34fb73d263a825e9a5, type: 3}
-  interactSprite: {fileID: 21300000, guid: 6bdbd18fe6546e04c87550e86d57ac8e, type: 3}
+  <interactSprite>k__BackingField: {fileID: 21300000, guid: 6bdbd18fe6546e04c87550e86d57ac8e, type: 3}
 --- !u!114 &4054889105463845631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,6 +1164,7 @@ GameObject:
   - component: {fileID: 7005921804745879993}
   - component: {fileID: 7616680160959594605}
   - component: {fileID: 5804683099265340503}
+  - component: {fileID: 3504379967592937494}
   - component: {fileID: 5650181643908621937}
   - component: {fileID: 857980534353049472}
   m_Layer: 5
@@ -1247,9 +1276,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954845843393564048}
-        m_TargetAssemblyTypeName: Sower, Assembly-CSharp
-        m_MethodName: SowBerries
+      - m_Target: {fileID: 3504379967592937494}
+        m_TargetAssemblyTypeName: SowManagement, Assembly-CSharp
+        m_MethodName: Sow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1271,6 +1300,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3504379967592937494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278900229467114521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c0e4ef05c7b304f9da3ed7fe398c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
+  _shovel: {fileID: 6046506841606122799}
 --- !u!114 &5650181643908621937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,7 +1351,6 @@ GameObject:
   - component: {fileID: 6108984125706683384}
   - component: {fileID: 8864373006894462763}
   - component: {fileID: 2876819815509079015}
-  - component: {fileID: 954845843393564048}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1377,22 +1419,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &954845843393564048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6883023389563552329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a485f7ce485e7d24a91f7887b1f96ee8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shovel: {fileID: 6046506841606122799}
-  _carrotPrefab: {fileID: 4288721120930904253, guid: c58a98a1c9fd055458d00869329f7ee5, type: 3}
-  _berriesPrefab: {fileID: 4252000622639940983, guid: 4f8f8f8924f6f1a47a66d90039b3b7f4, type: 3}
-  _wheatPrefab: {fileID: 1957948192250625029, guid: c07c0e60943b54d4fad332a7601261a6, type: 3}
 --- !u!1 &8607938515389233279
 GameObject:
   m_ObjectHideFlags: 0

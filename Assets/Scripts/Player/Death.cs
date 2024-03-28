@@ -11,16 +11,20 @@ public class Death : MonoBehaviour
 
     private void Awake()
     {
-        _initialPosition = transform.position;
         Instance = this; // singleton
+        _initialPosition = transform.position;
     }
 
+    /// <summary>
+    /// gestion de la mort du joueur : mets tous les compteurs a zero, lance l'evennement "OnDeath" et le téléporte à son poitn de spawn
+    /// </summary>
     public void Die()
     {
         OnDeath?.Invoke();
         transform.position = _initialPosition;
-        CropsManagement.instance.Carrots(-CropsManagement.instance.nbCarrots);
-        CropsManagement.instance.Berries(-CropsManagement.instance.nbBerries);
-        CropsManagement.instance.Wheat(-CropsManagement.instance.nbWheat);
+        CoinManagement.Instance.Coin(-CoinManagement.Instance.NbCoin); // reset l'argent
+        CropsManagement.Instance.Carrots(-CropsManagement.Instance.NbCarrots); // reset les carottes
+        CropsManagement.Instance.Berries(-CropsManagement.Instance.NbBerries); // reset les berries
+        CropsManagement.Instance.Wheat(-CropsManagement.Instance.NbWheat); // reset le blé
     }
 }

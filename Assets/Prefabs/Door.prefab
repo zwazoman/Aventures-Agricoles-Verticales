@@ -224,8 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fd476997005164ebee9cb4911c9ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lvlSelection: {fileID: 5277568761778808390}
+  <Player>k__BackingField: {fileID: 0}
   _interact: {fileID: 4333751926264697316}
+  _lvlSelection: {fileID: 5277568761778808390}
 --- !u!114 &5277568761778808390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3f501dab2d02343b0a7cb889b4c4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _exitDoor: {fileID: 946938079877010231}
+  _spawnPointList: []
 --- !u!114 &4333751926264697316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,9 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108e67d4af5f11e4f8490313c12a3dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canInteract: 0
-  normalSprite: {fileID: 0}
-  interactSprite: {fileID: 21300000, guid: 3c9f498ba9797d54a92f9596a3cb109b, type: 3}
+  <interactSprite>k__BackingField: {fileID: 21300000, guid: 3c9f498ba9797d54a92f9596a3cb109b, type: 3}
 --- !u!114 &5476633880925330073
 MonoBehaviour:
   m_ObjectHideFlags: 0

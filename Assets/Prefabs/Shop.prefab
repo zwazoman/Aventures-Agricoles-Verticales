@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &8535085069934896476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +189,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 20c85cc83fda76e4bb1a3852a29f018b, type: 2}
   _quantity: 1
+  _factor: 0
   _isCarrot: 1
   _isBerries: 0
   _isWheat: 0
@@ -364,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &9179985305695230589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,6 +382,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
   _quantity: 1
+  _factor: 0
   _isCarrot: 0
   _isBerries: 1
   _isWheat: 0
@@ -1110,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &7976396378850051858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,6 +1130,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 20c85cc83fda76e4bb1a3852a29f018b, type: 2}
   _quantity: 10
+  _factor: 2
   _isCarrot: 1
   _isBerries: 0
   _isWheat: 0
@@ -1416,6 +1422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &2073003106136667274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1431,6 +1438,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
   _quantity: 5
+  _factor: 1
   _isCarrot: 0
   _isBerries: 1
   _isWheat: 0
@@ -1607,6 +1615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &9211939565307142294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +1631,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 9d840ef7f2655e64f8204b0e04c432f5, type: 2}
   _quantity: 1
+  _factor: 0
   _isCarrot: 0
   _isBerries: 0
   _isWheat: 1
@@ -2200,6 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &1494309132227089988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,6 +2226,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 9d840ef7f2655e64f8204b0e04c432f5, type: 2}
   _quantity: 5
+  _factor: 1
   _isCarrot: 0
   _isBerries: 0
   _isWheat: 1
@@ -3145,6 +3157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &6686320314109754313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3160,6 +3173,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 20c85cc83fda76e4bb1a3852a29f018b, type: 2}
   _quantity: 1
+  _factor: 0
   _isCarrot: 1
   _isBerries: 0
   _isWheat: 0
@@ -3684,6 +3698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &3419048613856774136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3699,6 +3714,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
   _quantity: 10
+  _factor: 2
   _isCarrot: 0
   _isBerries: 1
   _isWheat: 0
@@ -4084,6 +4100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &4864210024098461401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4099,6 +4116,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 9d840ef7f2655e64f8204b0e04c432f5, type: 2}
   _quantity: 1
+  _factor: 0
   _isCarrot: 0
   _isBerries: 0
   _isWheat: 1
@@ -4261,9 +4279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108e67d4af5f11e4f8490313c12a3dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canInteract: 0
-  normalSprite: {fileID: 0}
-  interactSprite: {fileID: 21300000, guid: ce8ab9205e8de9547a44039dd3c0bcbe, type: 3}
+  <interactSprite>k__BackingField: {fileID: 21300000, guid: ce8ab9205e8de9547a44039dd3c0bcbe, type: 3}
 --- !u!114 &8803042405893487634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4353,6 +4369,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a63158fc-6ab7-45e0-9d63-3172bff98a94
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7664ddb1-ef02-41d2-88aa-6bacdcf45e75
+    m_ActionName: Player/Close[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -5147,6 +5167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &593177309405972767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5162,6 +5183,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 9d840ef7f2655e64f8204b0e04c432f5, type: 2}
   _quantity: 10
+  _factor: 2
   _isCarrot: 0
   _isBerries: 0
   _isWheat: 1
@@ -5472,6 +5494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &3668147388555030678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5487,6 +5510,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
   _quantity: 5
+  _factor: 1
   _isCarrot: 0
   _isBerries: 1
   _isWheat: 0
@@ -5663,6 +5687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &2137901237831543907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5678,6 +5703,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
   _quantity: 10
+  _factor: 2
   _isCarrot: 0
   _isBerries: 1
   _isWheat: 0
@@ -5988,6 +6014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &2123801945223466934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6003,6 +6030,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 20c85cc83fda76e4bb1a3852a29f018b, type: 2}
   _quantity: 5
+  _factor: 1
   _isCarrot: 1
   _isBerries: 0
   _isWheat: 0
@@ -6464,6 +6492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &6478122193004569236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6479,6 +6508,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 9d840ef7f2655e64f8204b0e04c432f5, type: 2}
   _quantity: 10
+  _factor: 2
   _isCarrot: 0
   _isBerries: 0
   _isWheat: 1
@@ -7195,6 +7225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &4191476348088523979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7210,6 +7241,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
   _quantity: 1
+  _factor: 0
   _isCarrot: 0
   _isBerries: 1
   _isWheat: 0
@@ -7461,6 +7493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &8251088671797223041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7476,6 +7509,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 9d840ef7f2655e64f8204b0e04c432f5, type: 2}
   _quantity: 5
+  _factor: 1
   _isCarrot: 0
   _isBerries: 0
   _isWheat: 1
@@ -7652,6 +7686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &992803360182468545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7667,6 +7702,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 20c85cc83fda76e4bb1a3852a29f018b, type: 2}
   _quantity: 5
+  _factor: 1
   _isCarrot: 1
   _isBerries: 0
   _isWheat: 0
@@ -7843,6 +7879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab59c2faa7520924a823f55f367a7e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _money: 0
 --- !u!114 &4384594050361223308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7858,6 +7895,7 @@ MonoBehaviour:
   _shopManagement: {fileID: 776859203570693434}
   _infos: {fileID: 11400000, guid: 20c85cc83fda76e4bb1a3852a29f018b, type: 2}
   _quantity: 10
+  _factor: 2
   _isCarrot: 1
   _isBerries: 0
   _isWheat: 0

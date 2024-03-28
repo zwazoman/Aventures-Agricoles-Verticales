@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         _coll2d = GetComponent<Collider2D>();
         _rb2d = GetComponent<Rigidbody2D>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         _rb2d.velocity = new Vector2 (_horizontal * _speed, _rb2d.velocity.y);
     }

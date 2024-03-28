@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7224212772657864626}
   - component: {fileID: 4492634379816044390}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Platform Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 3651645695987582798}
   - component: {fileID: 1034752586912272353}
   - component: {fileID: 946938079877010231}
-  - component: {fileID: 5277568761778808390}
+  - component: {fileID: 1524641956532873285}
   - component: {fileID: 4333751926264697316}
   - component: {fileID: 5476633880925330073}
   m_Layer: 0
@@ -224,9 +224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fd476997005164ebee9cb4911c9ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lvlSelection: {fileID: 5277568761778808390}
+  _lvlSelection: {fileID: 0}
+  player: {fileID: 0}
   _interact: {fileID: 4333751926264697316}
---- !u!114 &5277568761778808390
+--- !u!114 &1524641956532873285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,9 +236,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7499710528508213402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a3f501dab2d02343b0a7cb889b4c4e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6515b45f36b49524e81ebc67f97702b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _farmSpawn: {fileID: 0}
+  _player: {fileID: 0}
+  _exitDoor: {fileID: 946938079877010231}
 --- !u!114 &4333751926264697316
 MonoBehaviour:
   m_ObjectHideFlags: 0

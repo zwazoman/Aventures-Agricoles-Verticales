@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BuySell : MonoBehaviour
@@ -19,13 +17,19 @@ public class BuySell : MonoBehaviour
         _sellPrice = _infos.sellPrice * _quantity;
     }
 
+    /// <summary>
+    /// le joueur achète un objet
+    /// </summary>
     public void BuyItem()
     {
         _shopManagement.Buy(_buyPrice, _quantity, _isCarrot, _isBerries, _isWheat);
     }
 
-   public void SellItem()
-   {
-       _shopManagement.Sell(_sellPrice, _quantity, _isCarrot, _isBerries, _isWheat);
-   }
+    /// <summary>
+    /// Le joueur vend un objet
+    /// </summary>
+    public void SellItem()
+    {
+        _shopManagement.Sell(_sellPrice, _quantity, _isCarrot, _isBerries, _isWheat);
+    }
 }

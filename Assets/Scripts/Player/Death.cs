@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Death : MonoBehaviour
@@ -21,5 +19,8 @@ public class Death : MonoBehaviour
     {
         OnDeath?.Invoke();
         transform.position = _initialPosition;
+        CropsManagement.instance.Carrots(-CropsManagement.instance.nbCarrots);
+        CropsManagement.instance.Berries(-CropsManagement.instance.nbBerries);
+        CropsManagement.instance.Wheat(-CropsManagement.instance.nbWheat);
     }
 }

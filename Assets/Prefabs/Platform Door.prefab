@@ -289,9 +289,9 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 946938079877010231}
-        m_TargetAssemblyTypeName: ExitDoor, Assembly-CSharp
-        m_MethodName: Interact
+      - m_Target: {fileID: 4333751926264697316}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interaction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

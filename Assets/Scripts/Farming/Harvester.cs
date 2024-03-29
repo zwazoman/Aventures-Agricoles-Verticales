@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Harvester : MonoBehaviour
 {
@@ -10,27 +9,12 @@ public class Harvester : MonoBehaviour
     public bool IsWheat { get; set; }
     public bool IsDead { get; set; }
 
-    private bool _canInteract;
-
     [SerializeField] private Interact _interact;
     [SerializeField] private CropClass _infos;
-    //[SerializeField] private GameObject _notGrowedPanel;
 
-    private void Update()
+    private void Start()
     {
-        _canInteract = _interact._canInteract; 
-    }
-
-    /// <summary>
-    /// interaction avec l'input system
-    /// </summary>
-    /// <param name="context"></param>
-    public void Interact(InputAction.CallbackContext context)
-    {
-        if(context.performed && _canInteract)
-        {
-            if (CanHarvest) Harvest(); else print("pas pret");//_notGrowedPanel.SetActive(true);
-        }
+        _interact.OnInteract += Harvest;   
     }
 
     /// <summary>
@@ -38,6 +22,7 @@ public class Harvester : MonoBehaviour
     /// </summary>
     private void Harvest() // switchcase
     {
+        if (!CanHarvest) return;
         AudioManager.Instance.PlaySFX(AudioManager.Instance.HarvestSound); // joue le son de récolte
         if (!IsDead)
         {

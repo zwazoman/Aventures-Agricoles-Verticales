@@ -4363,9 +4363,9 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4047367218054210930}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: Interact
+      - m_Target: {fileID: 1421812675949698005}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interaction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

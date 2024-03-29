@@ -10,14 +10,8 @@ public class ButtonJuice : MonoBehaviour
     {
         _initialScale = transform.localScale;
     }
-
-    public void Hover()
-    {
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.ButtonHoverSound); // joue le son de passage sur un bouton
-    }
     public void Click()
     {
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.ButtonPressedSound); // joue le son de boutton pressé
         StartCoroutine(Bigger());
     }
 

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class FarmPlot : MonoBehaviour
 {
@@ -9,26 +8,14 @@ public class FarmPlot : MonoBehaviour
     [SerializeField] private GameObject _berriesButton;
     [SerializeField] private GameObject _wheatButton;
 
-    private bool _canSow = false;
-
+    private void Start()
+    {
+        _interact.OnInteract += OpenSowPanel;
+    }
 
     private void OnEnable()
     {
         _sowPanel.SetActive(false);
-    }
-
-    private void Update()
-    {
-        _canSow = _interact._canInteract;
-    }
-
-    /// <summary>
-    /// interaction input system (e)
-    /// </summary>
-    /// <param name="context"></param>
-    public void Interact(InputAction.CallbackContext context)
-    {
-        if (context.performed && _canSow) OpenSowPanel();
     }
 
     /// <summary>

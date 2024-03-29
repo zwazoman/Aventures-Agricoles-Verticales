@@ -16,14 +16,13 @@ public class Death : MonoBehaviour
     }
 
     /// <summary>
-    /// gestion de la mort du joueur : mets tous les compteurs a zero, lance l'evennement "OnDeath" et le téléporte à son poitn de spawn
+    /// gestion de la mort du joueur : mets les compteurs des "crops" a zero, lance l'evennement "OnDeath" et le téléporte à son poitn de spawn
     /// </summary>
     public void Die()
     {
         OnDeath?.Invoke();
         AudioManager.Instance.PlaySFX(AudioManager.Instance.DieSound); // joue le son de mort
         transform.position = _initialPosition;
-        CoinManagement.Instance.Coin(-CoinManagement.Instance.NbCoin); // reset l'argent
         CropsManagement.Instance.Carrots(-CropsManagement.Instance.NbCarrots); // reset les carottes
         CropsManagement.Instance.Berries(-CropsManagement.Instance.NbBerries); // reset les berries
         CropsManagement.Instance.Wheat(-CropsManagement.Instance.NbWheat); // reset le blé

@@ -8,6 +8,11 @@ public class Shop : MonoBehaviour
 
     private bool _canInteract;
 
+    private void Start()
+    {
+        _interact.OnInteract += OpenShopPanel;
+    }
+
     private void Update()
     {
         _canInteract = _interact._canInteract;

@@ -1036,7 +1036,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interact: {fileID: 4862018017156931660}
-  _sower: {fileID: 0}
   _sowPanel: {fileID: 8973786489756209275}
   _carrotsButton: {fileID: 988267070335138800}
   _berriesButton: {fileID: 6278900229467114521}
@@ -1129,9 +1128,9 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5626166891145265830}
-        m_TargetAssemblyTypeName: PlotInteraction, Assembly-CSharp
-        m_MethodName: Interact
+      - m_Target: {fileID: 4862018017156931660}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interaction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

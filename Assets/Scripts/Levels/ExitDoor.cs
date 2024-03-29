@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class ExitDoor : MonoBehaviour
 {
@@ -9,19 +8,10 @@ public class ExitDoor : MonoBehaviour
 
     [SerializeField] private Interact _interact;
     [SerializeField] private LvlSelection _lvlSelection;
-    private bool _canInteract;
-    private void Update()
-    {
-        _canInteract = _interact._canInteract;
-    }
 
-    /// <summary>
-    /// Input system : interaction (e)
-    /// </summary>
-    /// <param name="context"></param>
-    public void Interact(InputAction.CallbackContext context)
+    private void Start()
     {
-        if (context.performed && _canInteract) Exit();
+        _interact.OnInteract += Exit;
     }
 
     /// <summary>

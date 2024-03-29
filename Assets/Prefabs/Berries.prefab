@@ -162,12 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d054d1da63c19847830c4e10538274e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canHarvest: 0
-  shovel: {fileID: 0}
-  isCarrot: 0
-  isBerries: 0
-  isWheat: 0
-  isDead: 0
   _interact: {fileID: 6624658000402316175}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
 --- !u!114 &1754553980647794787
@@ -197,9 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108e67d4af5f11e4f8490313c12a3dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canInteract: 0
-  normalSprite: {fileID: 0}
-  interactSprite: {fileID: 0}
+  <interactSprite>k__BackingField: {fileID: 0}
 --- !u!114 &-4514599908217938012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,9 +227,9 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1715183241812634456}
-        m_TargetAssemblyTypeName: Harvester, Assembly-CSharp
-        m_MethodName: Interact
+      - m_Target: {fileID: 6624658000402316175}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interaction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

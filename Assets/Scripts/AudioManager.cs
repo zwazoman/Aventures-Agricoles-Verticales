@@ -14,8 +14,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip SowSound;
     public AudioClip DieSound;
     public AudioClip CoinSound;
-    public AudioClip ButtonHoverSound;
-    public AudioClip ButtonPressedSound;
     public AudioClip BounceSound;
     public AudioClip HarvestSound;
     public AudioClip ShopSound;

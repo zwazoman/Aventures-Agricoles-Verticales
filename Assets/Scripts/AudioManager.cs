@@ -2,41 +2,38 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager _instance = null;
-    public static AudioManager Instance => _instance;
+    public static AudioManager Instance; 
 
     [Header("AudioSources")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
-    [SerializeField] AudioSource SFXSource2;
-    public int test = 10;
 
     [Header("Musics")]
-    public AudioClip music;
     [Header("SFX")]
-    public AudioClip SFX;
-
-
+    public AudioClip DoorSound;
+    public AudioClip SowSound;
+    public AudioClip DieSound;
+    public AudioClip CoinSound;
+    public AudioClip ButtonHoverSound;
+    public AudioClip ButtonPressedSound;
+    public AudioClip BounceSound;
+    public AudioClip HarvestSound;
+    public AudioClip ShopSound;
+    public AudioClip JumpSound;
+    //level start sound ?
 
     private void Awake()
     {
-        // Singleton
-        if (_instance != null && _instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        else
-        {
-            _instance = this;
-            this.transform.SetParent(null);
-        }
+        Instance = this; // singleton
     }
 
-    public void PlaySFX(AudioClip clip, float _volume, float _pitch)
+    public void PlaySFX(AudioClip clip, float _volume = 1, float _pitch = 1)
     {
         SFXSource.volume = _volume;
         SFXSource.pitch = _pitch;
         SFXSource.PlayOneShot(clip);
     }
+
+    //music credits : "Home" by Neutrin05
+    //Sfx credits : pixabay / soundly
 }

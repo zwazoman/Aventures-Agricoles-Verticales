@@ -24,6 +24,7 @@ public class Shop : MonoBehaviour
     private void OpenShopPanel()
     {
         _shopPanel.SetActive(true);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.ShopSound); // joue le son de boutique
         Time.timeScale = 0f;
     }
 }

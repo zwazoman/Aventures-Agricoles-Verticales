@@ -4,15 +4,21 @@ using UnityEngine;
 public class ButtonJuice : MonoBehaviour
 {
     private Vector2 _initialScale;
+
     [SerializeField] private bool _money;
     private void Awake()
     {
         _initialScale = transform.localScale;
     }
+
+    public void Hover()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.ButtonHoverSound); // joue le son de passage sur un bouton
+    }
     public void Click()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.ButtonPressedSound); // joue le son de boutton pressé
         StartCoroutine(Bigger());
-        // si money jouer son monnaie sinon jouer pop
     }
 
     /// <summary>

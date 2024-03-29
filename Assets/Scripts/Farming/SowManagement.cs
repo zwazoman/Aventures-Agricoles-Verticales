@@ -15,6 +15,7 @@ public class SowManagement : MonoBehaviour
         crop.GetComponent<Harvester>().IsCarrot = _infos.IsCarrot;
         crop.GetComponent<Harvester>().IsBerries = _infos.IsBerries;
         crop.GetComponent<Harvester>().IsWheat = _infos.IsWheat;
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SowSound); // Son de plantation
         _shovel.SetActive(false);
         if (_infos.IsCarrot) CropsManagement.Instance.Carrots(-1);
         if (_infos.IsBerries) CropsManagement.Instance.Berries(-1);

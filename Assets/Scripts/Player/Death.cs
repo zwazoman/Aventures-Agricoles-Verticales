@@ -21,6 +21,7 @@ public class Death : MonoBehaviour
     public void Die()
     {
         OnDeath?.Invoke();
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.DieSound); // joue le son de mort
         transform.position = _initialPosition;
         CoinManagement.Instance.Coin(-CoinManagement.Instance.NbCoin); // reset l'argent
         CropsManagement.Instance.Carrots(-CropsManagement.Instance.NbCarrots); // reset les carottes

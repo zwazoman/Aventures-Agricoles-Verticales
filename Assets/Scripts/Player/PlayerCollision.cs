@@ -13,5 +13,9 @@ public class PlayerCollision : MonoBehaviour
         {
             Death.Instance.Die();
         }
+        if(collision.gameObject.layer == 9)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.BounceSound); // joue le son de rebond
+        }
     }
 }

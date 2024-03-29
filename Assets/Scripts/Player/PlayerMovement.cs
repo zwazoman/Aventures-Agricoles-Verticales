@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             _rb2d.velocity = new Vector2(_rb2d.velocity.x,_jumpPower);
-            //OnJump?.Invoke();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.JumpSound,0.8f,Random.Range(0.8f,1.2f)); // joue le son de saut avec un pitch random entre 0.8 et 1.2
         }
         if (context.canceled && _rb2d.velocity.y > 0)
         {

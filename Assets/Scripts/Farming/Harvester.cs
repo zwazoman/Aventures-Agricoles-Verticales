@@ -38,6 +38,7 @@ public class Harvester : MonoBehaviour
     /// </summary>
     private void Harvest() // switchcase
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.HarvestSound); // joue le son de récolte
         if (!IsDead)
         {
             if (IsCarrot) CropsManagement.Instance.Carrots(_infos.drops);

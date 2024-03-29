@@ -20,7 +20,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip HarvestSound;
     public AudioClip ShopSound;
     public AudioClip JumpSound;
-    //level start sound ?
 
     private void Awake()
     {

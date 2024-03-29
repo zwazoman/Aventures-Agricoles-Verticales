@@ -11,6 +11,7 @@ public class Harvester : MonoBehaviour
 
     [SerializeField] private Interact _interact;
     [SerializeField] private CropClass _infos;
+    [SerializeField] private HarvestSound _harvestSound;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class Harvester : MonoBehaviour
     private void Harvest() // switchcase
     {
         if (!CanHarvest) return;
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.HarvestSound); // joue le son de récolte
+        _harvestSound.PlayHarvest(); // joue le son de récolte
         if (!IsDead)
         {
             if (IsCarrot) CropsManagement.Instance.Carrots(_infos.drops);

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 606748467520712475}
   - component: {fileID: 5930426324100561747}
   - component: {fileID: -1715183241812634456}
+  - component: {fileID: 6206370435784356232}
   - component: {fileID: 1754553980647794787}
   - component: {fileID: 6624658000402316175}
   - component: {fileID: -4514599908217938012}
@@ -164,6 +165,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interact: {fileID: 6624658000402316175}
   _infos: {fileID: 11400000, guid: 0cb87e9e4d0c2da46a08e31f928bcb71, type: 2}
+  _harvestSound: {fileID: 6206370435784356232}
+--- !u!114 &6206370435784356232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252000622639940983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3886d8d017bd184ca74cfa4cb5b0fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1754553980647794787
 MonoBehaviour:
   m_ObjectHideFlags: 0

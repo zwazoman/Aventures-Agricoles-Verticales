@@ -7,6 +7,8 @@ public class Death : MonoBehaviour
 
     public event Action OnDeath;
 
+    [SerializeField] private DeathSound _deathSound;
+
     private Vector2 _initialPosition;
 
     private void Awake()
@@ -21,7 +23,7 @@ public class Death : MonoBehaviour
     public void Die()
     {
         OnDeath?.Invoke();
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.DieSound); // joue le son de mort
+        _deathSound.PlayDie(); // joue le son de mort
         transform.position = _initialPosition;
         CropsManagement.Instance.Carrots(-CropsManagement.Instance.NbCarrots); // reset les carottes
         CropsManagement.Instance.Berries(-CropsManagement.Instance.NbBerries); // reset les berries

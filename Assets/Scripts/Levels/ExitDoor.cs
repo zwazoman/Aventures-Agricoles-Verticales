@@ -8,6 +8,7 @@ public class ExitDoor : MonoBehaviour
 
     [SerializeField] private Interact _interact;
     [SerializeField] private LvlSelection _lvlSelection;
+    [SerializeField] private DoorSound _doorSound;
 
     private void Start()
     {
@@ -20,6 +21,6 @@ public class ExitDoor : MonoBehaviour
     private void Exit()
     {
         OnExit?.Invoke();
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.DoorSound); // joue le son de porte
+        _doorSound.PlayDoor(); // joue le son de porte
     }
 }

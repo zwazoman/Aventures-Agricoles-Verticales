@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-
+    [SerializeField] private BounceSound _bounceSound;
     /// <summary>
     /// gestion des collisions du joueur avec l'environnement
     /// </summary>
@@ -15,7 +15,7 @@ public class PlayerCollision : MonoBehaviour
         }
         if(collision.gameObject.layer == 9)
         {
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.BounceSound); // joue le son de rebond
+            _bounceSound.PlayBounce(); // joue le son de rebond
         }
     }
 }

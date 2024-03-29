@@ -4180,6 +4180,7 @@ GameObject:
   - component: {fileID: 8808242178322345146}
   - component: {fileID: 4405018855282448006}
   - component: {fileID: 4047367218054210930}
+  - component: {fileID: 655847322027434533}
   - component: {fileID: 1421812675949698005}
   - component: {fileID: 8803042405893487634}
   m_Layer: 0
@@ -4315,6 +4316,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interact: {fileID: 1421812675949698005}
   _shopPanel: {fileID: 7293016620357123651}
+  _shopSound: {fileID: 655847322027434533}
+--- !u!114 &655847322027434533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945715468459489141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93665b748052845438e593b45b1416e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1421812675949698005
 MonoBehaviour:
   m_ObjectHideFlags: 0

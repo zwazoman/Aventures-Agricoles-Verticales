@@ -6,9 +6,9 @@ public class CropsManagement : MonoBehaviour
     public static CropsManagement Instance;
     [field: SerializeField] public ExitDoor GrowDoor { get; private set; }
 
-    [SerializeField] private TMP_Text _carrotNumber;
-    [SerializeField] private TMP_Text _berriesNumber;
-    [SerializeField] private TMP_Text _wheatNumber;
+    [SerializeField] private CarrotUI _carrotUI;
+    [SerializeField] private BerriesUI _berriesUI;
+    [SerializeField] private WheatUI _wheatUI;
 
     public int NbCarrots { get; private set; }
     public int NbBerries { get; private set; }
@@ -18,9 +18,7 @@ public class CropsManagement : MonoBehaviour
     {
         Instance = this; // singleton
         NbCarrots = 2;
-        _carrotNumber.text = NbCarrots.ToString();
-        _berriesNumber.text = NbBerries.ToString();
-        _wheatNumber.text = NbWheat.ToString();
+        _carrotUI.ChangeCarrots(NbCarrots);
     }
 
     /// <summary>
@@ -31,7 +29,7 @@ public class CropsManagement : MonoBehaviour
     {
         if (_number < -NbCarrots) return; //enlève plus que l'on possède
         NbCarrots += _number;
-        _carrotNumber.text = NbCarrots.ToString();
+        _carrotUI.ChangeCarrots(NbCarrots);
     }
 
     /// <summary>
@@ -42,7 +40,7 @@ public class CropsManagement : MonoBehaviour
     {
         if (_number < -NbBerries) return; //enlève plus que l'on possède
         NbBerries += _number;
-        _berriesNumber.text = NbBerries.ToString();
+        _berriesUI.ChangeBerries(NbBerries);
     }
 
     /// <summary>
@@ -53,7 +51,7 @@ public class CropsManagement : MonoBehaviour
     {
         if (_number < -NbWheat) return; //enlève plus que l'on possède
         NbWheat += _number;
-        _wheatNumber.text = NbWheat.ToString();
+        _wheatUI.ChangeWheat(NbWheat);
     }
 
 }

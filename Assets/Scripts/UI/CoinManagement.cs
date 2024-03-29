@@ -4,7 +4,8 @@ using UnityEngine;
 public class CoinManagement : MonoBehaviour
 {
     public static CoinManagement Instance;
-    [SerializeField] private TMP_Text _coinText;
+
+    [SerializeField] private CoinUI _coinUI;
     public int NbCoin { get; private set; }
 
     private void Awake()
@@ -16,6 +17,6 @@ public class CoinManagement : MonoBehaviour
     {
         if (_number < -NbCoin) return;
         NbCoin += _number;
-        _coinText.text = NbCoin.ToString();
+        _coinUI.ChangeCoinNb(NbCoin);
     }
 }

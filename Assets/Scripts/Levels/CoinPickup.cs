@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
+    [SerializeField] private CoinSound _coinSound;
 
     /// <summary>
     /// qund le joueur entre dans ce trigger : les pièces possédées sont actualisées et l'objet est désactivé
@@ -12,7 +13,7 @@ public class CoinPickup : MonoBehaviour
         if (collider.gameObject.layer == 6) // si c'est un joueur
         {
             CoinManagement.Instance.Coin(1); // ajouter une pièce
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.CoinSound); // son de pièce
+            _coinSound.PlayCoin(); // son de pièce
             gameObject.SetActive(false); // désactiver la pièce
         }
     }

@@ -5,7 +5,6 @@ public class ButtonJuice : MonoBehaviour
 {
     private Vector2 _initialScale;
 
-    [SerializeField] private bool _money;
     private void Awake()
     {
         _initialScale = transform.localScale;

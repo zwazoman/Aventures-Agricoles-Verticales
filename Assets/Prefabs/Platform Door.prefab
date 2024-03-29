@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3651645695987582798}
   - component: {fileID: 1034752586912272353}
   - component: {fileID: 946938079877010231}
+  - component: {fileID: 8776033785671442097}
   - component: {fileID: 1524641956532873285}
   - component: {fileID: 4333751926264697316}
   - component: {fileID: 5476633880925330073}
@@ -227,6 +228,19 @@ MonoBehaviour:
   <Player>k__BackingField: {fileID: 0}
   _interact: {fileID: 4333751926264697316}
   _lvlSelection: {fileID: 0}
+  _doorSound: {fileID: 8776033785671442097}
+--- !u!114 &8776033785671442097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7499710528508213402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08a38aebdfddb14e92ec2b312d4055d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1524641956532873285
 MonoBehaviour:
   m_ObjectHideFlags: 0

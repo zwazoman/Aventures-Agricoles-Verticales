@@ -5,6 +5,7 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] private Interact _interact;
     [SerializeField] private GameObject _shopPanel;
+    [SerializeField] private ShopSound _shopSound;
 
     private bool _canInteract;
 
@@ -29,7 +30,7 @@ public class Shop : MonoBehaviour
     private void OpenShopPanel()
     {
         _shopPanel.SetActive(true);
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.ShopSound); // joue le son de boutique
+        _shopSound.PlayShop(); // joue le son de boutique
         Time.timeScale = 0f;
     }
 }
